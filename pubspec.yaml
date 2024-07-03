@@ -52,7 +52,16 @@ flutter:
     - assets/images/user.png
     - assets/images/filtro.png
     - assets/images/coffehorizont.png
-    
+    - assets/images/leftside.png
+    - assets/images/rightside.png
+    - assets/images/Group3151.png
+    - assets/images/Group3150.png
+    - assets/images/heart.png
+    - assets/images/bag2.png
+    - assets/images/fill1.png
+    - assets/images/bean.png
+    - assets/images/milk.png
+    - assets/images/heart2.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
