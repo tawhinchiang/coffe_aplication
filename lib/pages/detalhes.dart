@@ -1,5 +1,5 @@
+import 'package:coffee_application/pages/orderpage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Detalhes extends StatefulWidget {
   final String imageproduto;
@@ -319,7 +319,12 @@ class _DetalhesState extends State<Detalhes> {
                           ),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => OrderDetail()));
+                      },
                       child: Center(
                         child: Text(
                           'Buy Now',
