@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class OrderDetail extends StatefulWidget {
+  const OrderDetail({super.key});
+
   @override
   State<OrderDetail> createState() => _OrderDetailState();
 }
@@ -9,17 +11,17 @@ class _OrderDetailState extends State<OrderDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF9F9F9),
+      backgroundColor: const Color(0xffF9F9F9),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: Center(
+        title: const Center(
           child: Text(
             'Detail',
             style: TextStyle(color: Colors.black),
@@ -34,7 +36,7 @@ class _OrderDetailState extends State<OrderDetail> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(13),
-                    color: Color(0xFFF0F0F0)),
+                    color: const Color(0xFFF0F0F0)),
                 width: 321,
                 height: 48,
                 child: Row(
@@ -44,10 +46,10 @@ class _OrderDetailState extends State<OrderDetail> {
                       width: 154,
                       height: 40,
                       decoration: BoxDecoration(
-                        color: Color(0xFFC67C4E),
+                        color: const Color(0xFFC67C4E),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           'Deliver',
                           style: TextStyle(
@@ -62,10 +64,10 @@ class _OrderDetailState extends State<OrderDetail> {
                       width: 154,
                       height: 40,
                       decoration: BoxDecoration(
-                        color: Color(0xFFF0F0F0),
+                        color: const Color(0xFFF0F0F0),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           'Pick Up',
                           style: TextStyle(
@@ -80,8 +82,8 @@ class _OrderDetailState extends State<OrderDetail> {
                 ),
               ),
             ),
-            SizedBox(height: 31),
-            Container(
+            const SizedBox(height: 31),
+            const SizedBox(
               width: 321,
               height: 120,
               child: Column(
@@ -116,7 +118,7 @@ class _OrderDetailState extends State<OrderDetail> {
                 ],
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -124,7 +126,7 @@ class _OrderDetailState extends State<OrderDetail> {
                   width: 154,
                   height: 40,
                   color: Colors.white,
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'Left Container',
                       style: TextStyle(
@@ -135,12 +137,12 @@ class _OrderDetailState extends State<OrderDetail> {
                     ),
                   ),
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 Container(
                   width: 154,
                   height: 40,
                   color: Colors.white,
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'Right Container',
                       style: TextStyle(
@@ -153,8 +155,8 @@ class _OrderDetailState extends State<OrderDetail> {
                 ),
               ],
             ),
-            SizedBox(height: 15),
-            Container(
+            const SizedBox(height: 15),
+            const SizedBox(
               width: 315,
               child: Divider(
                 thickness: 0.8,

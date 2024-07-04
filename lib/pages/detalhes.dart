@@ -76,14 +76,14 @@ class _DetalhesState extends State<Detalhes> {
               style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Row(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 15, bottom: 28, left: 31),
-                child: const Row(
+              const Padding(
+                padding: EdgeInsets.only(top: 15, bottom: 28, left: 31),
+                child: Row(
                   children: [
                     Icon(Icons.star, color: Colors.amber),
                     SizedBox(
@@ -103,7 +103,7 @@ class _DetalhesState extends State<Detalhes> {
                     padding: const EdgeInsets.only(bottom: 28),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Color(0xFFFFF0F0),
+                          color: const Color(0xFFFFF0F0),
                           border: Border.all(color: Colors.transparent),
                           borderRadius: BorderRadius.circular(10)),
                       width: 44,
@@ -119,7 +119,7 @@ class _DetalhesState extends State<Detalhes> {
                     padding: const EdgeInsets.only(bottom: 28, right: 30),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Color(0xFFFFF0F0),
+                          color: const Color(0xFFFFF0F0),
                           border: Border.all(color: Colors.transparent),
                           borderRadius: BorderRadius.circular(10)),
                       width: 44,
@@ -134,16 +134,16 @@ class _DetalhesState extends State<Detalhes> {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30),
             child: SizedBox(
                 width: 315,
-                child: const Divider(
+                child: Divider(
                   color: Color(0xffEAEAEA),
                 )),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20, left: 27, bottom: 15),
+          const Padding(
+            padding: EdgeInsets.only(top: 20, left: 27, bottom: 15),
             child: Text(
               'Description',
               style: TextStyle(
@@ -152,8 +152,8 @@ class _DetalhesState extends State<Detalhes> {
                   fontSize: 18),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 27),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 27),
             child: Text(
               'A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo...',
               style: TextStyle(
@@ -163,8 +163,8 @@ class _DetalhesState extends State<Detalhes> {
               textAlign: TextAlign.justify,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 30, top: 22, bottom: 12),
+          const Padding(
+            padding: EdgeInsets.only(left: 30, top: 22, bottom: 12),
             child: Text(
               'Size',
               style: TextStyle(
@@ -189,8 +189,8 @@ class _DetalhesState extends State<Detalhes> {
                       height: 43,
                       decoration: BoxDecoration(
                         color: selectedIndex == 0
-                            ? Color(0xffC67C4E)
-                            : Color(0xffFFFFFF),
+                            ? const Color(0xffC67C4E)
+                            : const Color(0xffFFFFFF),
                         border: Border.all(
                             color: const Color.fromARGB(255, 179, 179, 179),
                             width: 0.5),
@@ -219,10 +219,10 @@ class _DetalhesState extends State<Detalhes> {
                       height: 43,
                       decoration: BoxDecoration(
                         color: selectedIndex == 1
-                            ? Color(0xffC67C4E)
-                            : Color(0xffFFF5EE),
-                        border:
-                            Border.all(width: 0.5, color: Color(0xffC67C4E)),
+                            ? const Color(0xffC67C4E)
+                            : const Color(0xffFFF5EE),
+                        border: Border.all(
+                            width: 0.5, color: const Color(0xffC67C4E)),
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Center(
@@ -231,7 +231,7 @@ class _DetalhesState extends State<Detalhes> {
                           style: TextStyle(
                             color: selectedIndex == 1
                                 ? Colors.white
-                                : Color(0xffC67C4E),
+                                : const Color(0xffC67C4E),
                           ),
                         ),
                       ),
@@ -248,8 +248,8 @@ class _DetalhesState extends State<Detalhes> {
                       height: 43,
                       decoration: BoxDecoration(
                         color: selectedIndex == 2
-                            ? Color(0xffC67C4E)
-                            : Color(0xffFFFFFF),
+                            ? const Color(0xffC67C4E)
+                            : const Color(0xffFFFFFF),
                         border: Border.all(
                             color: const Color.fromARGB(255, 179, 179, 179),
                             width: 0.5),
@@ -277,12 +277,12 @@ class _DetalhesState extends State<Detalhes> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 30, left: 39),
+                const Padding(
+                  padding: EdgeInsets.only(top: 30, left: 39),
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(
+                        padding: EdgeInsets.only(
                           bottom: 8,
                         ),
                         child: Text(
@@ -311,7 +311,7 @@ class _DetalhesState extends State<Detalhes> {
                     child: TextButton(
                       style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(Color(0xffC67C4E)),
+                            MaterialStateProperty.all(const Color(0xffC67C4E)),
                         shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
@@ -323,9 +323,9 @@ class _DetalhesState extends State<Detalhes> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => OrderDetail()));
+                                builder: (context) => const OrderDetail()));
                       },
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           'Buy Now',
                           style: TextStyle(color: Colors.white),
