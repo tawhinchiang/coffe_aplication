@@ -323,7 +323,10 @@ class _DetalhesState extends State<Detalhes> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const OrderDetail()));
+                                builder: (context) => OrderDetail(
+                                    imageproduto: widget.imageproduto,
+                                    nomeproduto: widget.nomeproduto,
+                                    descrprod: widget.descrprod)));
                       },
                       child: const Center(
                         child: Text(
