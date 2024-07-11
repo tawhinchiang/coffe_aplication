@@ -65,6 +65,8 @@ flutter:
     - assets/images/Document.png
     - assets/images/Frame32.png
     - assets/images/Frame33.png
+    - assets/images/Discount.png
+    - assets/images/moneys.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

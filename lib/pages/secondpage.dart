@@ -151,6 +151,7 @@ class SearchCoffeState extends State<SearchCoffe> {
                         imageproduto: imageUrl,
                         nomeproduto: coffeeType,
                         descrprod: description,
+                        price: price,
                       )));
         },
         child: ContainerTypeCoffe(

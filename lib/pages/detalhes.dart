@@ -5,12 +5,14 @@ class Detalhes extends StatefulWidget {
   final String imageproduto;
   final String nomeproduto;
   final String descrprod;
+  final String price;
 
   const Detalhes(
       {super.key,
       required this.imageproduto,
       required this.nomeproduto,
-      required this.descrprod});
+      required this.descrprod,
+      required this.price});
 
   @override
   State<Detalhes> createState() => _DetalhesState();
@@ -324,9 +326,11 @@ class _DetalhesState extends State<Detalhes> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => OrderDetail(
-                                    imageproduto: widget.imageproduto,
-                                    nomeproduto: widget.nomeproduto,
-                                    descrprod: widget.descrprod)));
+                                      imageproduto: widget.imageproduto,
+                                      nomeproduto: widget.nomeproduto,
+                                      descrprod: widget.descrprod,
+                                      price: widget.price,
+                                    )));
                       },
                       child: const Center(
                         child: Text(
