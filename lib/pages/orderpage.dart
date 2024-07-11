@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -56,7 +58,10 @@ class _OrderDetailState extends State<OrderDetail> {
           ),
         ),
         body: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.only(
+              top: 16.0,
+              left: 0,
+            ),
             child: Column(children: [
               Center(
                 child: Container(
@@ -412,39 +417,50 @@ class _OrderDetailState extends State<OrderDetail> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Payment Summary'),
+                    Text('Payment Summary',
+                        style: TextStyle(
+                            color: Color(0xff2F2D2C),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16)),
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 14),
+                      padding: const EdgeInsets.only(bottom: 14, top: 9),
                       child: SizedBox(
                         width: 315,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text('Price'),
+                            const Text('Price',
+                                style: TextStyle(
+                                    color: Color(0xff2F2D2C),
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14)),
                             const SizedBox(width: 10),
                             Text(widget.price),
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: 315,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text('Delivery Fee'),
-                          Row(
-                            children: [
-                              const SizedBox(width: 10),
-                              Text('\$ 2.0 '),
-                              const SizedBox(width: 10),
-                              Text(
-                                '\$ 1.0',
-                                style: TextStyle(fontWeight: FontWeight.w600),
-                              ),
-                            ],
-                          ),
-                        ],
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 15.0),
+                      child: SizedBox(
+                        width: 315,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text('Delivery Fee'),
+                            Row(
+                              children: [
+                                const SizedBox(width: 10),
+                                Text('\$ 2.0 '),
+                                const SizedBox(width: 10),
+                                Text(
+                                  '\$ 1.0',
+                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -458,8 +474,12 @@ class _OrderDetailState extends State<OrderDetail> {
                       width: 315,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Text('Total Payment'),
+                        children: [
+                          Text('Total Payment',
+                              style: TextStyle(
+                                  color: Color(0xff2F2D2C),
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14)),
                           SizedBox(width: 10),
                           Text('\$ 5.53'),
                         ],
@@ -469,15 +489,21 @@ class _OrderDetailState extends State<OrderDetail> {
                 ),
               ),
               Container(
-                color: const Color(0xffF1F1F1),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20)),
+                    color: Colors.transparent,
+                    border: Border.all(color: Color(0xffF1F1F1), width: 1.5)),
+                // color: ,
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 22),
+                    const SizedBox(height: 19),
                     Row(
                       children: [
-                        const SizedBox(width: 26), // Adiciona margem esquerda
+                        const SizedBox(width: 30), // Adiciona margem esquerda
                         Image.asset(
                           'assets/images/moneys.png',
                           width: 24,
@@ -487,30 +513,38 @@ class _OrderDetailState extends State<OrderDetail> {
                             width:
                                 22), // Espaço entre a imagem e o container "Cash"
                         Container(
-                          width: 51,
+                          width: 112,
                           height: 24,
-                          // padding: const EdgeInsets.symmetric(
-                          //     vertical: 8.0, horizontal: 16.0),
-                          decoration: BoxDecoration(
-                            color: const Color(0xffC67C4E),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Center(
-                            child: const Text(
-                              'Cash',
-                              style: TextStyle(
-                                  color: Colors.white,
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 51,
+                                height: 24,
+                                // padding: const EdgeInsets.symmetric(
+                                //     vertical: 8.0, horizontal: 16.0),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xffC67C4E),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Center(
+                                  child: const Text(
+                                    'Cash',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 12),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              const Text(
+                                '\$5.53',
+                                style: TextStyle(
                                   fontWeight: FontWeight.w400,
-                                  fontSize: 12),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        const Text(
-                          '\$5.53',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         const Spacer(),
@@ -547,7 +581,7 @@ class _OrderDetailState extends State<OrderDetail> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 22), // Espaço abaixo do botão
+                    // Espaço abaixo do botão
                   ],
                 ),
               ),
