@@ -1,7 +1,6 @@
 # coffe_aplication
 
-A new Flutter project.
-
+Novo Projeto flutter, com o objetivo de aprimorar meu design. Baseado em um app de delivery.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
